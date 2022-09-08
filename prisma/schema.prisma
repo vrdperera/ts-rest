@@ -26,7 +26,7 @@ model Book {
   created_at     DateTime @default(now())
   updated_at     DateTime @default(now())
   title          String   @db.VarChar(255)
-  ifFiction      Boolean
+  if_fiction     Boolean
   date_published DateTime
   author         Author   @relation(fields: [author_id], references: [id], onDelete: Cascade)
   author_id      Int
